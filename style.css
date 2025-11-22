@@ -1,12 +1,12 @@
 /* ============================================================
-   FONT-FACE — Base Fonts
+   PART 1 — FONT-FACE DECLARATIONS (UPDATED FOR VERCEL)
    ============================================================ */
+
+/* Base Fonts */
 @font-face { font-family: "TAU-Marutham"; src: url("/fonts/TAU-Marutham.ttf") format("truetype"); }
 @font-face { font-family: "Bamini"; src: url("/fonts/bamini.ttf") format("truetype"); }
 
-/* ============================================================
-   FONT-FACE — uniAmma Fonts
-   ============================================================ */
+/* uniAmma Fonts */
 @font-face { font-family: "uniAmma-normal"; src: url("/fonts/uniAmma-normal.ttf") format("truetype"); }
 @font-face { font-family: "uniAmma-subheading"; src: url("/fonts/uniAmma-subheading.ttf") format("truetype"); }
 @font-face { font-family: "uniAmma-001"; src: url("/fonts/uniAmma-001.ttf") format("truetype"); }
@@ -28,9 +28,7 @@
 @font-face { font-family: "uniAmma-25"; src: url("/fonts/uniAmma-25.ttf") format("truetype"); }
 @font-face { font-family: "uniAmma-26"; src: url("/fonts/uniAmma-26.ttf") format("truetype"); }
 
-/* ============================================================
-   FONT-FACE — Gladiator Tamil
-   ============================================================ */
+/* Gladiator Tamil */
 @font-face { font-family: "GladiatorTamil-13"; src: url("/fonts/Gladiator Tamil  (13).ttf") format("truetype"); }
 @font-face { font-family: "GladiatorTamil-15"; src: url("/fonts/Gladiator Tamil  (15).ttf") format("truetype"); }
 @font-face { font-family: "GladiatorTamil-16"; src: url("/fonts/Gladiator Tamil  (16).ttf") format("truetype"); }
@@ -67,9 +65,7 @@
 @font-face { font-family: "GladiatorTamil2-8"; src: url("/fonts/Gladiator Tamil 2 (8).ttf") format("truetype"); }
 @font-face { font-family: "GladiatorTamil2-9"; src: url("/fonts/Gladiator Tamil 2 (9).ttf") format("truetype"); }
 
-/* ============================================================
-   FONT-FACE — Hariesan Fonts
-   ============================================================ */
+/* Hariesan Fonts */
 @font-face { font-family: "Hariesan1"; src: url("/fonts/hariesan1.ttf") format("truetype"); }
 @font-face { font-family: "Hariesan11"; src: url("/fonts/hariesan11.ttf") format("truetype"); }
 @font-face { font-family: "Hariesan12"; src: url("/fonts/hariesan12.ttf") format("truetype"); }
@@ -83,17 +79,19 @@
 @font-face { font-family: "Hariesan8"; src: url("/fonts/hariesan8.ttf") format("truetype"); }
 @font-face { font-family: "Hariesan9"; src: url("/fonts/hariesan9.ttf") format("truetype"); }
 
-/* ============================================================
-   FONT-FACE — Other Fonts
-   ============================================================ */
+/* Other Fonts */
 @font-face { font-family: "MobileTricks"; src: url("/fonts/Mobile Tricks.09.ttf") format("truetype"); }
 @font-face { font-family: "NaanumRowdy"; src: url("/fonts/NAANUM ROWDY DHAAN.otf") format("opentype"); }
 @font-face { font-family: "RaviB"; src: url("/fonts/ravi-b.ttf") format("truetype"); }
 @font-face { font-family: "Signature"; src: url("/fonts/Signatrue.ttf") format("truetype"); }
 @font-face { font-family: "Tamil046"; src: url("/fonts/TAM-Tamil046 Normal.ttf") format("truetype"); }
 
-   GLOBAL VARIABLES
+
+
+/* ============================================================
+   PART 2 — GLOBAL LAYOUT + BASE UI
    ============================================================ */
+
 :root {
   --outer-purple: #4A2A7A;
   --inner-purple: #4A2A7A;
@@ -103,9 +101,6 @@
   --canvas: 1080px;
 }
 
-/* ============================================================
-   BODY + GLOBAL PAGE LAYOUT
-   ============================================================ */
 body {
   background: #111;
   margin: 0;
@@ -117,17 +112,11 @@ body {
   gap: 16px;
 }
 
-/* ============================================================
-   OUTER WRAPPER AROUND POST CANVAS
-   ============================================================ */
 .outer {
   background: var(--outer-purple);
   padding: 10px;
 }
 
-/* ============================================================
-   BUTTON BASICS
-   ============================================================ */
 .btn {
   margin-top: 12px;
   padding: 10px 14px;
@@ -144,13 +133,17 @@ body {
   background: #444;
   color: #fff;
 }
+
+
+
 /* ============================================================
-   CONTROLS PANEL CONTAINER
+   PART 3 — CONTROLS PANEL STYLING
    ============================================================ */
+
 .controls {
   width: 100%;
   max-width: 420px;
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(255,255,255,0.07);
   padding: 16px;
   border-radius: 10px;
   margin: 0 auto;
@@ -162,9 +155,6 @@ body {
   font-weight: 900;
 }
 
-/* ============================================================
-   LABELS
-   ============================================================ */
 .controls label {
   margin-top: 10px;
   display: block;
@@ -172,9 +162,6 @@ body {
   font-weight: 700;
 }
 
-/* ============================================================
-   INPUTS, TEXTAREA, SELECT
-   ============================================================ */
 .controls input,
 .controls textarea,
 .controls select {
@@ -188,14 +175,17 @@ body {
   font-size: 13px;
 }
 
-/* Textarea specific */
 .controls textarea {
   min-height: 80px;
   resize: vertical;
 }
+
+
+
 /* ============================================================
-   POST CANVAS (Square 1080×1080)
+   PART 4 — CANVAS / POST AREA
    ============================================================ */
+
 #post {
   width: 100%;
   max-width: var(--canvas);
@@ -207,9 +197,6 @@ body {
   overflow: hidden;
 }
 
-/* ============================================================
-   IMAGE AREA (Top half)
-   ============================================================ */
 .single-image {
   position: absolute;
   top: 3%;
@@ -226,9 +213,6 @@ body {
   object-fit: cover;
 }
 
-/* ============================================================
-   TEXT AREA (Bottom half)
-   ============================================================ */
 .text-area {
   position: absolute;
   left: 4%;
@@ -238,47 +222,36 @@ body {
   text-align: center;
   padding: 2% 6%;
 }
+
+
+
 /* ============================================================
-   TITLE (Main heading text)
+   PART 5 — TEXT STYLES (TITLE, DESC, HIGHLIGHT)
    ============================================================ */
+
 .title {
   font-family: "TAU-Marutham";
   font-size: 72px;
   font-weight: 900;
   color: #FFD300;
-
-  /* outline */
   -webkit-text-stroke: 3.5px #000;
-
-  /* glow */
   text-shadow:
-    0px 0px 8px rgba(0, 0, 0, 0.9),
-    0px 0px 12px rgba(0, 0, 0, 0.7),
-    0px 0px 15px rgba(0, 0, 0, 0.5);
-
+    0px 0px 8px rgba(0,0,0,0.9),
+    0px 0px 12px rgba(0,0,0,0.7),
+    0px 0px 15px rgba(0,0,0,0.5);
   letter-spacing: -1px;
   line-height: 1.05;
 }
 
-/* ============================================================
-   DESCRIPTION (4-line powered text)
-   ============================================================ */
 .desc {
   margin-top: 10px;
   font-size: clamp(18px, 3vw, 34px);
   font-weight: 700;
   line-height: 1.35;
-
-  /* light black outline */
-  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.4);
-
-  /* glow */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 0.5px rgba(0,0,0,0.4);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 
-/* ============================================================
-   HIGHLIGHTED WORDS (yellow)
-   ============================================================ */
 .highlight {
   color: var(--yellow);
   font-weight: 900;
