@@ -1,0 +1,285 @@
+/* ============================================================
+   FONT-FACE — Base Fonts
+   ============================================================ */
+@font-face { font-family: "TAU-Marutham"; src: url("/fonts/TAU-Marutham.ttf") format("truetype"); }
+@font-face { font-family: "Bamini"; src: url("/fonts/bamini.ttf") format("truetype"); }
+
+/* ============================================================
+   FONT-FACE — uniAmma Fonts
+   ============================================================ */
+@font-face { font-family: "uniAmma-normal"; src: url("/fonts/uniAmma-normal.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-subheading"; src: url("/fonts/uniAmma-subheading.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-001"; src: url("/fonts/uniAmma-001.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-10"; src: url("/fonts/uniAmma-10.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-11"; src: url("/fonts/uniAmma-11.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-12"; src: url("/fonts/uniAmma-12.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-13"; src: url("/fonts/uniAmma-13.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-14"; src: url("/fonts/uniAmma-14.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-15"; src: url("/fonts/uniAmma-15.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-16"; src: url("/fonts/uniAmma-16.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-17"; src: url("/fonts/uniAmma-17.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-18"; src: url("/fonts/uniAmma-18.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-19"; src: url("/fonts/uniAmma-19.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-20"; src: url("/fonts/uniAmma-20.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-21"; src: url("/fonts/uniAmma-21.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-22"; src: url("/fonts/uniAmma-22.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-23"; src: url("/fonts/uniAmma-23.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-24"; src: url("/fonts/uniAmma-24.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-25"; src: url("/fonts/uniAmma-25.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-26"; src: url("/fonts/uniAmma-26.ttf") format("truetype"); }
+
+/* ============================================================
+   FONT-FACE — Gladiator Tamil
+   ============================================================ */
+@font-face { font-family: "GladiatorTamil-13"; src: url("/fonts/Gladiator Tamil  (13).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil-15"; src: url("/fonts/Gladiator Tamil  (15).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil-16"; src: url("/fonts/Gladiator Tamil  (16).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil-18"; src: url("/fonts/Gladiator Tamil  (18).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil-19"; src: url("/fonts/Gladiator Tamil  (19).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil-20"; src: url("/fonts/Gladiator Tamil  (20).ttf") format("truetype"); }
+
+/* Gladiator Tamil 3 */
+@font-face { font-family: "GladiatorTamil3-1"; src: url("/fonts/Gladiator Tamil  3 (1).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil3-10"; src: url("/fonts/Gladiator Tamil  3 (10).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil3-11"; src: url("/fonts/Gladiator Tamil  3 (11).TTF") format("truetype"); }
+@font-face { font-family: "GladiatorTamil3-13"; src: url("/fonts/Gladiator Tamil  3 (13).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil3-14"; src: url("/fonts/Gladiator Tamil  3 (14).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil3-2"; src: url("/fonts/Gladiator Tamil  3 (2).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil3-6"; src: url("/fonts/Gladiator Tamil  3 (6).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil3-7"; src: url("/fonts/Gladiator Tamil  3 (7).TTF") format("truetype"); }
+
+/* Gladiator Tamil 1 */
+@font-face { font-family: "GladiatorTamil1-13"; src: url("/fonts/Gladiator Tamil 1  (13).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil1-15"; src: url("/fonts/Gladiator Tamil 1  (15).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil1-3"; src: url("/fonts/Gladiator Tamil 1  (3).TTF") format("truetype"); }
+@font-face { font-family: "GladiatorTamil1-5"; src: url("/fonts/Gladiator Tamil 1  (5).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil1-9"; src: url("/fonts/Gladiator Tamil 1  (9).TTF") format("truetype"); }
+
+/* Gladiator Tamil 2 */
+@font-face { font-family: "GladiatorTamil2-11"; src: url("/fonts/Gladiator Tamil 2 (11).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil2-12"; src: url("/fonts/Gladiator Tamil 2 (12).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil2-14"; src: url("/fonts/Gladiator Tamil 2 (14).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil2-34"; src: url("/fonts/Gladiator Tamil 2 (34).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil2-4"; src: url("/fonts/Gladiator Tamil 2 (4).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil2-5"; src: url("/fonts/Gladiator Tamil 2 (5).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil2-55"; src: url("/fonts/Gladiator Tamil 2 (55).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil2-56"; src: url("/fonts/Gladiator Tamil 2 (56).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil2-8"; src: url("/fonts/Gladiator Tamil 2 (8).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil2-9"; src: url("/fonts/Gladiator Tamil 2 (9).ttf") format("truetype"); }
+
+/* ============================================================
+   FONT-FACE — Hariesan Fonts
+   ============================================================ */
+@font-face { font-family: "Hariesan1"; src: url("/fonts/hariesan1.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan11"; src: url("/fonts/hariesan11.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan12"; src: url("/fonts/hariesan12.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan13"; src: url("/fonts/hariesan13.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan2"; src: url("/fonts/hariesan2.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan3"; src: url("/fonts/hariesan3.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan4"; src: url("/fonts/hariesan4.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan5"; src: url("/fonts/hariesan5.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan6"; src: url("/fonts/hariesan6.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan7"; src: url("/fonts/hariesan7.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan8"; src: url("/fonts/hariesan8.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan9"; src: url("/fonts/hariesan9.ttf") format("truetype"); }
+
+/* ============================================================
+   FONT-FACE — Other Fonts
+   ============================================================ */
+@font-face { font-family: "MobileTricks"; src: url("/fonts/Mobile Tricks.09.ttf") format("truetype"); }
+@font-face { font-family: "NaanumRowdy"; src: url("/fonts/NAANUM ROWDY DHAAN.otf") format("opentype"); }
+@font-face { font-family: "RaviB"; src: url("/fonts/ravi-b.ttf") format("truetype"); }
+@font-face { font-family: "Signature"; src: url("/fonts/Signatrue.ttf") format("truetype"); }
+@font-face { font-family: "Tamil046"; src: url("/fonts/TAM-Tamil046 Normal.ttf") format("truetype"); }
+
+   GLOBAL VARIABLES
+   ============================================================ */
+:root {
+  --outer-purple: #4A2A7A;
+  --inner-purple: #4A2A7A;
+  --white: #ffffff;
+  --yellow: #ffd400;
+  --border: 16px;
+  --canvas: 1080px;
+}
+
+/* ============================================================
+   BODY + GLOBAL PAGE LAYOUT
+   ============================================================ */
+body {
+  background: #111;
+  margin: 0;
+  padding: 12px;
+  color: #fff;
+  font-family: "TAU-Marutham", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ============================================================
+   OUTER WRAPPER AROUND POST CANVAS
+   ============================================================ */
+.outer {
+  background: var(--outer-purple);
+  padding: 10px;
+}
+
+/* ============================================================
+   BUTTON BASICS
+   ============================================================ */
+.btn {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: #ff8b00;
+  border: none;
+  color: #000;
+  border-radius: 8px;
+  font-weight: 900;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn.secondary {
+  background: #444;
+  color: #fff;
+}
+/* ============================================================
+   CONTROLS PANEL CONTAINER
+   ============================================================ */
+.controls {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 16px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.controls h3 {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+/* ============================================================
+   LABELS
+   ============================================================ */
+.controls label {
+  margin-top: 10px;
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ============================================================
+   INPUTS, TEXTAREA, SELECT
+   ============================================================ */
+.controls input,
+.controls textarea,
+.controls select {
+  width: 100%;
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 9px;
+  margin-top: 5px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* Textarea specific */
+.controls textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+/* ============================================================
+   POST CANVAS (Square 1080×1080)
+   ============================================================ */
+#post {
+  width: 100%;
+  max-width: var(--canvas);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  position: relative;
+  background: var(--inner-purple);
+  border: var(--border) solid var(--white);
+  overflow: hidden;
+}
+
+/* ============================================================
+   IMAGE AREA (Top half)
+   ============================================================ */
+.single-image {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  right: 3%;
+  height: 50%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.single-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================================
+   TEXT AREA (Bottom half)
+   ============================================================ */
+.text-area {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  bottom: 4%;
+  height: 42%;
+  text-align: center;
+  padding: 2% 6%;
+}
+/* ============================================================
+   TITLE (Main heading text)
+   ============================================================ */
+.title {
+  font-family: "TAU-Marutham";
+  font-size: 72px;
+  font-weight: 900;
+  color: #FFD300;
+
+  /* outline */
+  -webkit-text-stroke: 3.5px #000;
+
+  /* glow */
+  text-shadow:
+    0px 0px 8px rgba(0, 0, 0, 0.9),
+    0px 0px 12px rgba(0, 0, 0, 0.7),
+    0px 0px 15px rgba(0, 0, 0, 0.5);
+
+  letter-spacing: -1px;
+  line-height: 1.05;
+}
+
+/* ============================================================
+   DESCRIPTION (4-line powered text)
+   ============================================================ */
+.desc {
+  margin-top: 10px;
+  font-size: clamp(18px, 3vw, 34px);
+  font-weight: 700;
+  line-height: 1.35;
+
+  /* light black outline */
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.4);
+
+  /* glow */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================================
+   HIGHLIGHTED WORDS (yellow)
+   ============================================================ */
+.highlight {
+  color: var(--yellow);
+  font-weight: 900;
+}
