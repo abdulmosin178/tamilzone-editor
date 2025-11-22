@@ -3,8 +3,376 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Tamilzone — Font Selector + Auto 4-Line Format</title>
-<link rel="stylesheet" href="style.css">
+<title>Tamilzone — Auto 4-Line + Ratios + Double Image</title>
+
+<style>
+/* ============================================================
+   PART 1 — FONT-FACE DECLARATIONS
+   ============================================================ */
+
+/* Base Fonts */
+@font-face { font-family: "TAU-Marutham"; src: url("/fonts/TAU-Marutham.ttf") format("truetype"); }
+@font-face { font-family: "Bamini"; src: url("/fonts/bamini.ttf") format("truetype"); }
+
+/* uniAmma Fonts */
+@font-face { font-family: "uniAmma-normal"; src: url("/fonts/uniAmma-normal.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-subheading"; src: url("/fonts/uniAmma-subheading.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-001"; src: url("/fonts/uniAmma-001.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-10"; src: url("/fonts/uniAmma-10.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-11"; src: url("/fonts/uniAmma-11.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-12"; src: url("/fonts/uniAmma-12.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-13"; src: url("/fonts/uniAmma-13.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-14"; src: url("/fonts/uniAmma-14.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-15"; src: url("/fonts/uniAmma-15.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-16"; src: url("/fonts/uniAmma-16.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-17"; src: url("/fonts/uniAmma-17.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-18"; src: url("/fonts/uniAmma-18.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-19"; src: url("/fonts/uniAmma-19.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-20"; src: url("/fonts/uniAmma-20.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-21"; src: url("/fonts/uniAmma-21.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-22"; src: url("/fonts/uniAmma-22.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-23"; src: url("/fonts/uniAmma-23.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-24"; src: url("/fonts/uniAmma-24.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-25"; src: url("/fonts/uniAmma-25.ttf") format("truetype"); }
+@font-face { font-family: "uniAmma-26"; src: url("/fonts/uniAmma-26.ttf") format("truetype"); }
+
+/* Gladiator Tamil */
+@font-face { font-family: "GladiatorTamil-13"; src: url("/fonts/Gladiator Tamil  (13).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil-15"; src: url("/fonts/Gladiator Tamil  (15).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil-16"; src: url("/fonts/Gladiator Tamil  (16).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil-18"; src: url("/fonts/Gladiator Tamil  (18).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil-19"; src: url("/fonts/Gladiator Tamil  (19).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil-20"; src: url("/fonts/Gladiator Tamil  (20).ttf") format("truetype"); }
+
+/* Gladiator Tamil 3 */
+@font-face { font-family: "GladiatorTamil3-1"; src: url("/fonts/Gladiator Tamil  3 (1).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil3-10"; src: url("/fonts/Gladiator Tamil  3 (10).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil3-11"; src: url("/fonts/Gladiator Tamil  3 (11).TTF") format("truetype"); }
+@font-face { font-family: "GladiatorTamil3-13"; src: url("/fonts/Gladiator Tamil  3 (13).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil3-14"; src: url("/fonts/Gladiator Tamil  3 (14).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil3-2"; src: url("/fonts/Gladiator Tamil  3 (2).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil3-6"; src: url("/fonts/Gladiator Tamil  3 (6).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil3-7"; src: url("/fonts/Gladiator Tamil  3 (7).TTF") format("truetype"); }
+
+/* Gladiator Tamil 1 */
+@font-face { font-family: "GladiatorTamil1-13"; src: url("/fonts/Gladiator Tamil 1  (13).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil1-15"; src: url("/fonts/Gladiator Tamil 1  (15).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil1-3"; src: url("/fonts/Gladiator Tamil 1  (3).TTF") format("truetype"); }
+@font-face { font-family: "GladiatorTamil1-5"; src: url("/fonts/Gladiator Tamil 1  (5).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil1-9"; src: url("/fonts/Gladiator Tamil 1  (9).TTF") format("truetype"); }
+
+/* Gladiator Tamil 2 */
+@font-face { font-family: "GladiatorTamil2-11"; src: url("/fonts/Gladiator Tamil 2 (11).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil2-12"; src: url("/fonts/Gladiator Tamil 2 (12).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil2-14"; src: url("/fonts/Gladiator Tamil 2 (14).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil2-34"; src: url("/fonts/Gladiator Tamil 2 (34).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil2-4"; src: url("/fonts/Gladiator Tamil 2 (4).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil2-5"; src: url("/fonts/Gladiator Tamil 2 (5).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil2-55"; src: url("/fonts/Gladiator Tamil 2 (55).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil2-56"; src: url("/fonts/Gladiator Tamil 2 (56).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil2-8"; src: url("/fonts/Gladiator Tamil 2 (8).ttf") format("truetype"); }
+@font-face { font-family: "GladiatorTamil2-9"; src: url("/fonts/Gladiator Tamil 2 (9).ttf") format("truetype"); }
+
+/* Hariesan Fonts */
+@font-face { font-family: "Hariesan1"; src: url("/fonts/hariesan1.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan11"; src: url("/fonts/hariesan11.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan12"; src: url("/fonts/hariesan12.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan13"; src: url("/fonts/hariesan13.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan2"; src: url("/fonts/hariesan2.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan3"; src: url("/fonts/hariesan3.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan4"; src: url("/fonts/hariesan4.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan5"; src: url("/fonts/hariesan5.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan6"; src: url("/fonts/hariesan6.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan7"; src: url("/fonts/hariesan7.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan8"; src: url("/fonts/hariesan8.ttf") format("truetype"); }
+@font-face { font-family: "Hariesan9"; src: url("/fonts/hariesan9.ttf") format("truetype"); }
+
+/* Other Fonts */
+@font-face { font-family: "MobileTricks"; src: url("/fonts/Mobile Tricks.09.ttf") format("truetype"); }
+@font-face { font-family: "NaanumRowdy"; src: url("/fonts/NAANUM ROWDY DHAAN.otf") format("opentype"); }
+@font-face { font-family: "RaviB"; src: url("/fonts/ravi-b.ttf") format("truetype"); }
+@font-face { font-family: "Signature"; src: url("/fonts/Signatrue.ttf") format("truetype"); }
+@font-face { font-family: "Tamil046"; src: url("/fonts/TAM-Tamil046 Normal.ttf") format("truetype"); }
+
+
+
+/* ============================================================
+   PART 2 — GLOBAL LAYOUT + BASE UI
+   ============================================================ */
+
+:root {
+  --outer-purple: #4A2A7A;
+  --inner-purple: #4A2A7A;
+  --white: #ffffff;
+  --yellow: #ffd400;
+  --border: 16px;
+  --canvas: 1080px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #111;
+  margin: 0;
+  padding: 12px;
+  color: #fff;
+  font-family: "TAU-Marutham", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.outer {
+  background: var(--outer-purple);
+  padding: 10px;
+}
+
+.btn {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: #ff8b00;
+  border: none;
+  color: #000;
+  border-radius: 8px;
+  font-weight: 900;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn.secondary {
+  background: #444;
+  color: #fff;
+}
+
+.btn.full-width {
+  width: 100%;
+}
+
+
+
+/* ============================================================
+   PART 3 — CONTROLS PANEL + TABS
+   ============================================================ */
+
+.controls {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(255,255,255,0.07);
+  padding: 16px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.controls h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.controls label {
+  margin-top: 10px;
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.controls input,
+.controls textarea,
+.controls select {
+  width: 100%;
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 9px;
+  margin-top: 5px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.controls textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.controls input[type="range"] {
+  padding: 0;
+}
+
+.controls input[type="color"] {
+  padding: 0;
+  height: 32px;
+}
+
+/* Tabs */
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 8px 6px;
+  font-size: 12px;
+  border-radius: 999px;
+  border: 1px solid #555;
+  background: #222;
+  color: #eee;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: #ff8b00;
+  color: #000;
+  border-color: #ff8b00;
+  font-weight: 800;
+}
+
+.tab-panel {
+  display: none;
+  margin-top: 6px;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+/* Sliders */
+
+.slider-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.slider-row span {
+  font-size: 11px;
+  opacity: 0.8;
+  min-width: 52px;
+}
+
+
+
+/* ============================================================
+   PART 4 — CANVAS / POST AREA
+   ============================================================ */
+
+#post {
+  width: 100%;
+  max-width: var(--canvas);
+  aspect-ratio: 1 / 1; /* default 1:1, JS will change */
+  margin: 0 auto;
+  position: relative;
+  background: var(--inner-purple);
+  border: var(--border) solid var(--white);
+  overflow: hidden;
+}
+
+/* Image layout wrapper */
+
+.image-layout {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  right: 3%;
+  height: 50%;
+}
+
+/* Single vs double */
+
+.single-image,
+.double-image {
+  width: 100%;
+  height: 100%;
+}
+
+.image-layout.single .single-image {
+  display: block;
+}
+
+.image-layout.single .double-image {
+  display: none;
+}
+
+.image-layout.double .single-image {
+  display: none;
+}
+
+.image-layout.double .double-image {
+  display: flex;
+  gap: 2%;
+}
+
+.img-box {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.single-image {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.single-image img,
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text area */
+
+.text-area {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  bottom: 4%;
+  height: 42%;
+  text-align: center;
+  padding: 2% 6%;
+}
+
+
+
+/* ============================================================
+   PART 5 — TEXT STYLES (TITLE, DESC, HIGHLIGHT)
+   ============================================================ */
+
+.title {
+  font-family: "TAU-Marutham";
+  font-size: 72px;
+  font-weight: 900;
+  color: #FFD300;
+  -webkit-text-stroke: 3.5px #000;
+  text-shadow:
+    0px 0px 8px rgba(0,0,0,0.9),
+    0px 0px 12px rgba(0,0,0,0.7),
+    0px 0px 15px rgba(0,0,0,0.5);
+  letter-spacing: -1px;
+  line-height: 1.05;
+}
+
+.desc {
+  margin-top: 10px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.35;
+  -webkit-text-stroke: 0.5px rgba(0,0,0,0.4);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.highlight {
+  color: var(--yellow);
+  font-weight: 900;
+}
+</style>
 </head>
 
 <body>
@@ -12,128 +380,252 @@
 <div class="controls">
   <h3>Tamilzone — Auto 4-Line Formatter</h3>
 
-  <label>Upload Image</label>
-  <input id="mainImgFile" type="file" accept="image/*">
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="tab-canvas">Canvas</button>
+    <button class="tab-btn" data-tab="tab-images">Images</button>
+    <button class="tab-btn" data-tab="tab-text">Text &amp; Effects</button>
+    <button class="tab-btn" data-tab="tab-fonts">Fonts</button>
+  </div>
 
-  <label>Title</label>
-  <input id="titleIn" type="text">
+  <!-- Canvas Tab -->
+  <div class="tab-panel active" id="tab-canvas">
+    <label>Canvas Ratio</label>
+    <select id="ratioSelect">
+      <option value="1:1">1 : 1 (Square)</option>
+      <option value="4:5">4 : 5 (Portrait)</option>
+      <option value="9:16">9 : 16 (Reels / Story)</option>
+    </select>
 
-  <label>Description (one paragraph, no line breaks)</label>
-  <textarea id="descIn"></textarea>
+    <button id="downloadBtn" class="btn full-width">Download JPG</button>
+    <button id="resetBtn" class="btn secondary full-width">Reset</button>
+  </div>
 
-  <label>Highlight Words (comma separated)</label>
-  <input id="keysIn" type="text">
+  <!-- Images Tab -->
+  <div class="tab-panel" id="tab-images">
+    <label>Layout</label>
+    <select id="layoutSelect">
+      <option value="single">Single Image</option>
+      <option value="double">Double Image (Side by Side)</option>
+    </select>
 
-  <label>Select Font</label>
+    <label>Upload Image (Single / Left)</label>
+    <input id="mainImgFile" type="file" accept="image/*">
 
-  <select id="fontSelect">
-    <!-- Base Fonts -->
-    <optgroup label="Base Fonts">
-      <option value="TAU-Marutham">TAU-Marutham.ttf</option>
-      <option value="Bamini">bamini.ttf</option>
-    </optgroup>
+    <label>Upload Second Image (Right, for Double)</label>
+    <input id="secondImgFile" type="file" accept="image/*">
+  </div>
 
-    <!-- uniAmma Fonts -->
-    <optgroup label="uniAmma Fonts">
-      <option value="uniAmma-normal">uniAmma-normal.ttf</option>
-      <option value="uniAmma-subheading">uniAmma-subheading.ttf</option>
-      <option value="uniAmma-001">uniAmma-001.ttf</option>
-      <option value="uniAmma-10">uniAmma-10.ttf</option>
-      <option value="uniAmma-11">uniAmma-11.ttf</option>
-      <option value="uniAmma-12">uniAmma-12.ttf</option>
-      <option value="uniAmma-13">uniAmma-13.ttf</option>
-      <option value="uniAmma-14">uniAmma-14.ttf</option>
-      <option value="uniAmma-15">uniAmma-15.ttf</option>
-      <option value="uniAmma-16">uniAmma-16.ttf</option>
-      <option value="uniAmma-17">uniAmma-17.ttf</option>
-      <option value="uniAmma-18">uniAmma-18.ttf</option>
-      <option value="uniAmma-19">uniAmma-19.ttf</option>
-      <option value="uniAmma-20">uniAmma-20.ttf</option>
-      <option value="uniAmma-21">uniAmma-21.ttf</option>
-      <option value="uniAmma-22">uniAmma-22.ttf</option>
-      <option value="uniAmma-23">uniAmma-23.ttf</option>
-      <option value="uniAmma-24">uniAmma-24.ttf</option>
-      <option value="uniAmma-25">uniAmma-25.ttf</option>
-      <option value="uniAmma-26">uniAmma-26.ttf</option>
-    </optgroup>
+  <!-- Text & Effects Tab -->
+  <div class="tab-panel" id="tab-text">
+    <label>Title</label>
+    <input id="titleIn" type="text">
 
-    <!-- Gladiator Fonts -->
-    <optgroup label="Gladiator Tamil">
-      <option value="GladiatorTamil-13">Gladiator Tamil (13).ttf</option>
-      <option value="GladiatorTamil-15">Gladiator Tamil (15).ttf</option>
-      <option value="GladiatorTamil-16">Gladiator Tamil (16).ttf</option>
-      <option value="GladiatorTamil-18">Gladiator Tamil (18).ttf</option>
-      <option value="GladiatorTamil-19">Gladiator Tamil (19).ttf</option>
-      <option value="GladiatorTamil-20">Gladiator Tamil (20).ttf</option>
-    </optgroup>
+    <label>Description (one paragraph, no line breaks)</label>
+    <textarea id="descIn"></textarea>
 
-    <optgroup label="Gladiator Tamil 3">
-      <option value="GladiatorTamil3-1">Gladiator Tamil 3 (1).ttf</option>
-      <option value="GladiatorTamil3-10">Gladiator Tamil 3 (10).ttf</option>
-      <option value="GladiatorTamil3-11">Gladiator Tamil 3 (11).TTF</option>
-      <option value="GladiatorTamil3-13">Gladiator Tamil 3 (13).ttf</option>
-      <option value="GladiatorTamil3-14">Gladiator Tamil 3 (14).ttf</option>
-      <option value="GladiatorTamil3-2">Gladiator Tamil 3 (2).ttf</option>
-      <option value="GladiatorTamil3-6">Gladiator Tamil 3 (6).ttf</option>
-      <option value="GladiatorTamil3-7">Gladiator Tamil 3 (7).TTF</option>
-    </optgroup>
+    <label>Highlight Words (comma separated)</label>
+    <input id="keysIn" type="text">
 
-    <optgroup label="Gladiator Tamil 1">
-      <option value="GladiatorTamil1-13">Gladiator Tamil 1 (13).ttf</option>
-      <option value="GladiatorTamil1-15">Gladiator Tamil 1 (15).ttf</option>
-      <option value="GladiatorTamil1-3">Gladiator Tamil 1 (3).TTF</option>
-      <option value="GladiatorTamil1-5">Gladiator Tamil 1 (5).ttf</option>
-      <option value="GladiatorTamil1-9">Gladiator Tamil 1 (9).TTF</option>
-    </optgroup>
+    <hr style="margin-top:12px; border:0; border-top:1px solid #444;">
 
-    <optgroup label="Gladiator Tamil 2">
-      <option value="GladiatorTamil2-11">Gladiator Tamil 2 (11).ttf</option>
-      <option value="GladiatorTamil2-12">Gladiator Tamil 2 (12).ttf</option>
-      <option value="GladiatorTamil2-14">Gladiator Tamil 2 (14).ttf</option>
-      <option value="GladiatorTamil2-34">Gladiator Tamil 2 (34).ttf</option>
-      <option value="GladiatorTamil2-4">Gladiator Tamil 2 (4).ttf</option>
-      <option value="GladiatorTamil2-5">Gladiator Tamil 2 (5).ttf</option>
-      <option value="GladiatorTamil2-55">Gladiator Tamil 2 (55).ttf</option>
-      <option value="GladiatorTamil2-56">Gladiator Tamil 2 (56).ttf</option>
-      <option value="GladiatorTamil2-8">Gladiator Tamil 2 (8).ttf</option>
-      <option value="GladiatorTamil2-9">Gladiator Tamil 2 (9).ttf</option>
-    </optgroup>
+    <label>Title Size / Line Height / Letter Spacing</label>
+    <div class="slider-row">
+      <span>Size</span>
+      <input id="titleSize" type="range" min="36" max="120" value="72">
+      <span id="titleSizeVal">72px</span>
+    </div>
+    <div class="slider-row">
+      <span>Line H</span>
+      <input id="titleLineHeight" type="range" min="0.80" max="1.40" step="0.01" value="1.05">
+      <span id="titleLHVal">1.05</span>
+    </div>
+    <div class="slider-row">
+      <span>Letter</span>
+      <input id="titleLetterSpacing" type="range" min="-4" max="10" step="0.1" value="-1">
+      <span id="letterSpaceVal">-1.0px</span>
+    </div>
 
-    <optgroup label="Hariesan Fonts">
-      <option value="Hariesan1">hariesan1.ttf</option>
-      <option value="Hariesan11">hariesan11.ttf</option>
-      <option value="Hariesan12">hariesan12.ttf</option>
-      <option value="Hariesan13">hariesan13.ttf</option>
-      <option value="Hariesan2">hariesan2.ttf</option>
-      <option value="Hariesan3">hariesan3.ttf</option>
-      <option value="Hariesan4">hariesan4.ttf</option>
-      <option value="Hariesan5">hariesan5.ttf</option>
-      <option value="Hariesan6">hariesan6.ttf</option>
-      <option value="Hariesan7">hariesan7.ttf</option>
-      <option value="Hariesan8">hariesan8.ttf</option>
-      <option value="Hariesan9">hariesan9.ttf</option>
-    </optgroup>
+    <label>Description Size / Line Height</label>
+    <div class="slider-row">
+      <span>Size</span>
+      <input id="descSize" type="range" min="16" max="48" value="28">
+      <span id="descSizeVal">28px</span>
+    </div>
+    <div class="slider-row">
+      <span>Line H</span>
+      <input id="descLineHeight" type="range" min="1.00" max="2.00" step="0.01" value="1.35">
+      <span id="descLHVal">1.35</span>
+    </div>
 
-    <optgroup label="Other Fonts">
-      <option value="MobileTricks">Mobile Tricks.09.ttf</option>
-      <option value="NaanumRowdy">NAANUM ROWDY DHAAN.otf</option>
-      <option value="RaviB">ravi-b.ttf</option>
-      <option value="Signature">Signatrue.ttf</option>
-      <option value="Tamil046">TAM-Tamil046 Normal.ttf</option>
-    </optgroup>
+    <hr style="margin-top:12px; border:0; border-top:1px solid #444;">
 
-  </select>
+    <label>Stroke (“Scratch”)</label>
+    <div class="slider-row">
+      <span>Width</span>
+      <input id="strokeWidth" type="range" min="0" max="8" step="0.1" value="3.5">
+      <span id="strokeWidthVal">3.5px</span>
+    </div>
+    <div class="slider-row">
+      <span>Color</span>
+      <input id="strokeColor" type="color" value="#000000">
+    </div>
 
-  <button id="downloadBtn" class="btn">Download JPG</button>
-  <button id="resetBtn" class="btn secondary">Reset</button>
+    <hr style="margin-top:12px; border:0; border-top:1px solid #444;">
+
+    <label>Shadow</label>
+    <div style="margin-top:6px;">
+      <input id="shadowToggle" type="checkbox" checked>
+      <span style="font-size:12px;">Enable text shadow</span>
+    </div>
+
+    <div class="slider-row">
+      <span>Offset X</span>
+      <input id="shadowX" type="range" min="-20" max="20" value="0">
+      <span id="shadowXVal">0px</span>
+    </div>
+    <div class="slider-row">
+      <span>Offset Y</span>
+      <input id="shadowY" type="range" min="-20" max="20" value="0">
+      <span id="shadowYVal">0px</span>
+    </div>
+    <div class="slider-row">
+      <span>Blur</span>
+      <input id="shadowBlur" type="range" min="0" max="40" value="10">
+      <span id="shadowBlurVal">10px</span>
+    </div>
+    <div class="slider-row">
+      <span>Alpha</span>
+      <input id="shadowAlpha" type="range" min="0" max="1" step="0.05" value="0.9">
+      <span id="shadowAlphaVal">0.9</span>
+    </div>
+    <div class="slider-row">
+      <span>Color</span>
+      <input id="shadowColor" type="color" value="#000000">
+    </div>
+  </div>
+
+  <!-- Fonts Tab -->
+  <div class="tab-panel" id="tab-fonts">
+    <label>Select Font</label>
+    <select id="fontSelect">
+      <!-- Base Fonts -->
+      <optgroup label="Base Fonts">
+        <option value="TAU-Marutham">TAU-Marutham.ttf</option>
+        <option value="Bamini">bamini.ttf</option>
+      </optgroup>
+
+      <!-- uniAmma Fonts -->
+      <optgroup label="uniAmma Fonts">
+        <option value="uniAmma-normal">uniAmma-normal.ttf</option>
+        <option value="uniAmma-subheading">uniAmma-subheading.ttf</option>
+        <option value="uniAmma-001">uniAmma-001.ttf</option>
+        <option value="uniAmma-10">uniAmma-10.ttf</option>
+        <option value="uniAmma-11">uniAmma-11.ttf</option>
+        <option value="uniAmma-12">uniAmma-12.ttf</option>
+        <option value="uniAmma-13">uniAmma-13.ttf</option>
+        <option value="uniAmma-14">uniAmma-14.ttf</option>
+        <option value="uniAmma-15">uniAmma-15.ttf</option>
+        <option value="uniAmma-16">uniAmma-16.ttf</option>
+        <option value="uniAmma-17">uniAmma-17.ttf</option>
+        <option value="uniAmma-18">uniAmma-18.ttf</option>
+        <option value="uniAmma-19">uniAmma-19.ttf</option>
+        <option value="uniAmma-20">uniAmma-20.ttf</option>
+        <option value="uniAmma-21">uniAmma-21.ttf</option>
+        <option value="uniAmma-22">uniAmma-22.ttf</option>
+        <option value="uniAmma-23">uniAmma-23.ttf</option>
+        <option value="uniAmma-24">uniAmma-24.ttf</option>
+        <option value="uniAmma-25">uniAmma-25.ttf</option>
+        <option value="uniAmma-26">uniAmma-26.ttf</option>
+      </optgroup>
+
+      <!-- Gladiator Fonts -->
+      <optgroup label="Gladiator Tamil">
+        <option value="GladiatorTamil-13">Gladiator Tamil (13).ttf</option>
+        <option value="GladiatorTamil-15">Gladiator Tamil (15).ttf</option>
+        <option value="GladiatorTamil-16">Gladiator Tamil (16).ttf</option>
+        <option value="GladiatorTamil-18">Gladiator Tamil (18).ttf</option>
+        <option value="GladiatorTamil-19">Gladiator Tamil (19).ttf</option>
+        <option value="GladiatorTamil-20">Gladiator Tamil (20).ttf</option>
+      </optgroup>
+
+      <optgroup label="Gladiator Tamil 3">
+        <option value="GladiatorTamil3-1">Gladiator Tamil 3 (1).ttf</option>
+        <option value="GladiatorTamil3-10">Gladiator Tamil 3 (10).ttf</option>
+        <option value="GladiatorTamil3-11">Gladiator Tamil 3 (11).TTF</option>
+        <option value="GladiatorTamil3-13">Gladiator Tamil 3 (13).ttf</option>
+        <option value="GladiatorTamil3-14">Gladiator Tamil 3 (14).ttf</option>
+        <option value="GladiatorTamil3-2">Gladiator Tamil 3 (2).ttf</option>
+        <option value="GladiatorTamil3-6">Gladiator Tamil 3 (6).ttf</option>
+        <option value="GladiatorTamil3-7">Gladiator Tamil 3 (7).TTF</option>
+      </optgroup>
+
+      <optgroup label="Gladiator Tamil 1">
+        <option value="GladiatorTamil1-13">Gladiator Tamil 1 (13).ttf</option>
+        <option value="GladiatorTamil1-15">Gladiator Tamil 1 (15).ttf</option>
+        <option value="GladiatorTamil1-3">Gladiator Tamil 1 (3).TTF</option>
+        <option value="GladiatorTamil1-5">Gladiator Tamil 1 (5).ttf</option>
+        <option value="GladiatorTamil1-9">Gladiator Tamil 1 (9).TTF</option>
+      </optgroup>
+
+      <optgroup label="Gladiator Tamil 2">
+        <option value="GladiatorTamil2-11">Gladiator Tamil 2 (11).ttf</option>
+        <option value="GladiatorTamil2-12">Gladiator Tamil 2 (12).ttf</option>
+        <option value="GladiatorTamil2-14">Gladiator Tamil 2 (14).ttf</option>
+        <option value="GladiatorTamil2-34">Gladiator Tamil 2 (34).ttf</option>
+        <option value="GladiatorTamil2-4">Gladiator Tamil 2 (4).ttf</option>
+        <option value="GladiatorTamil2-5">Gladiator Tamil 2 (5).ttf</option>
+        <option value="GladiatorTamil2-55">Gladiator Tamil 2 (55).ttf</option>
+        <option value="GladiatorTamil2-56">Gladiator Tamil 2 (56).ttf</option>
+        <option value="GladiatorTamil2-8">Gladiator Tamil 2 (8).ttf</option>
+        <option value="GladiatorTamil2-9">Gladiator Tamil 2 (9).ttf</option>
+      </optgroup>
+
+      <optgroup label="Hariesan Fonts">
+        <option value="Hariesan1">hariesan1.ttf</option>
+        <option value="Hariesan11">hariesan11.ttf</option>
+        <option value="Hariesan12">hariesan12.ttf</option>
+        <option value="Hariesan13">hariesan13.ttf</option>
+        <option value="Hariesan2">hariesan2.ttf</option>
+        <option value="Hariesan3">hariesan3.ttf</option>
+        <option value="Hariesan4">hariesan4.ttf</option>
+        <option value="Hariesan5">hariesan5.ttf</option>
+        <option value="Hariesan6">hariesan6.ttf</option>
+        <option value="Hariesan7">hariesan7.ttf</option>
+        <option value="Hariesan8">hariesan8.ttf</option>
+        <option value="Hariesan9">hariesan9.ttf</option>
+      </optgroup>
+
+      <optgroup label="Other Fonts">
+        <option value="MobileTricks">Mobile Tricks.09.ttf</option>
+        <option value="NaanumRowdy">NAANUM ROWDY DHAAN.otf</option>
+        <option value="RaviB">ravi-b.ttf</option>
+        <option value="Signature">Signatrue.ttf</option>
+        <option value="Tamil046">TAM-Tamil046 Normal.ttf</option>
+      </optgroup>
+    </select>
+  </div>
 
 </div>
 
 <div class="outer">
   <div id="post">
 
-    <div class="single-image">
-      <img id="mainImg" alt="">
+    <div id="imageLayout" class="image-layout single">
+      <!-- Single image -->
+      <div class="single-image">
+        <img id="mainImgSingle" alt="">
+      </div>
+
+      <!-- Double image (side by side) -->
+      <div class="double-image">
+        <div class="img-box">
+          <img id="mainImgLeft" alt="">
+        </div>
+        <div class="img-box">
+          <img id="mainImgRight" alt="">
+        </div>
+      </div>
     </div>
 
     <div class="text-area">
@@ -144,6 +636,377 @@
   </div>
 </div>
 
-<script src="script.js"></script>
+<!-- html2canvas -->
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+<script>
+/* ============================================================
+   ELEMENTS
+   ============================================================ */
+
+// Canvas / layout
+const postEl = document.getElementById("post");
+const imageLayout = document.getElementById("imageLayout");
+
+// Images + file inputs
+const mainImgSingle = document.getElementById("mainImgSingle");
+const mainImgLeft   = document.getElementById("mainImgLeft");
+const mainImgRight  = document.getElementById("mainImgRight");
+const mainImgFile   = document.getElementById("mainImgFile");
+const secondImgFile = document.getElementById("secondImgFile");
+const layoutSelect  = document.getElementById("layoutSelect");
+
+// Text inputs
+const titleIn = document.getElementById("titleIn");
+const descIn  = document.getElementById("descIn");
+const keysIn  = document.getElementById("keysIn");
+
+// Text display
+const titleEl = document.getElementById("titleEl");
+const descEl  = document.getElementById("descEl");
+
+// Font
+const fontSelect = document.getElementById("fontSelect");
+
+// Canvas ratio
+const ratioSelect = document.getElementById("ratioSelect");
+
+// Buttons
+const downloadBtn = document.getElementById("downloadBtn");
+const resetBtn    = document.getElementById("resetBtn");
+
+// Tabs
+const tabBtns   = document.querySelectorAll(".tab-btn");
+const tabPanels = document.querySelectorAll(".tab-panel");
+
+// Text style inputs
+const titleSizeInput          = document.getElementById("titleSize");
+const descSizeInput           = document.getElementById("descSize");
+const titleLineHeightInput    = document.getElementById("titleLineHeight");
+const descLineHeightInput     = document.getElementById("descLineHeight");
+const titleLetterSpacingInput = document.getElementById("titleLetterSpacing");
+
+const strokeWidthInput = document.getElementById("strokeWidth");
+const strokeColorInput = document.getElementById("strokeColor");
+
+const shadowToggle     = document.getElementById("shadowToggle");
+const shadowXInput     = document.getElementById("shadowX");
+const shadowYInput     = document.getElementById("shadowY");
+const shadowBlurInput  = document.getElementById("shadowBlur");
+const shadowAlphaInput = document.getElementById("shadowAlpha");
+const shadowColorInput = document.getElementById("shadowColor");
+
+// Live labels
+const titleSizeVal      = document.getElementById("titleSizeVal");
+const descSizeVal       = document.getElementById("descSizeVal");
+const titleLHVal        = document.getElementById("titleLHVal");
+const descLHVal         = document.getElementById("descLHVal");
+const letterSpaceVal    = document.getElementById("letterSpaceVal");
+const strokeWidthVal    = document.getElementById("strokeWidthVal");
+const shadowXVal        = document.getElementById("shadowXVal");
+const shadowYVal        = document.getElementById("shadowYVal");
+const shadowBlurVal     = document.getElementById("shadowBlurVal");
+const shadowAlphaVal    = document.getElementById("shadowAlphaVal");
+
+
+/* ============================================================
+   TABS
+   ============================================================ */
+
+tabBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const target = btn.dataset.tab;
+    tabBtns.forEach(b => b.classList.remove("active"));
+    tabPanels.forEach(p => p.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById(target).classList.add("active");
+  });
+});
+
+
+/* ============================================================
+   IMAGE UPLOAD + LAYOUT
+   ============================================================ */
+
+mainImgFile.addEventListener("change", e => {
+  const f = e.target.files[0];
+  if (!f) return;
+  const url = URL.createObjectURL(f);
+  mainImgSingle.src = url; // single layout
+  mainImgLeft.src   = url; // left in double layout
+});
+
+secondImgFile.addEventListener("change", e => {
+  const f = e.target.files[0];
+  if (!f) return;
+  const url = URL.createObjectURL(f);
+  mainImgRight.src = url; // right in double layout
+});
+
+layoutSelect.addEventListener("change", () => {
+  const mode = layoutSelect.value; // "single" / "double"
+  imageLayout.classList.remove("single", "double");
+  imageLayout.classList.add(mode);
+});
+
+
+/* ============================================================
+   FONT HANDLING
+   ============================================================ */
+
+function applyFont() {
+  const f = fontSelect.value;
+  titleEl.style.fontFamily = f;
+  descEl.style.fontFamily  = f;
+  document.querySelectorAll(".highlight").forEach(el => {
+    el.style.fontFamily = f;
+  });
+}
+
+
+/* ============================================================
+   AUTO 4-LINE + HIGHLIGHT
+   ============================================================ */
+
+function autoFormatTo4Lines(text) {
+  let clean = text.replace(/\s+/g, " ").trim();
+  if (!clean) return "";
+  const words  = clean.split(" ");
+  const target = Math.max(8, Math.round(clean.length / 4));
+
+  const lines = ["", "", "", ""];
+  let idx = 0, len = 0;
+
+  for (let w of words) {
+    if (idx < 3 && lines[idx] && len + 1 + w.length > target + 4) {
+      idx++;
+      len = 0;
+    }
+    if (lines[idx]) {
+      lines[idx] += " ";
+      len++;
+    }
+    lines[idx] += w;
+    len += w.length;
+  }
+
+  return lines.filter(l => l).join("\n");
+}
+
+function updateDesc() {
+  const raw  = descIn.value;
+  const text = autoFormatTo4Lines(raw);
+  const keys = keysIn.value
+    .split(",")
+    .map(x => x.trim())
+    .filter(Boolean);
+
+  if (!text) {
+    descEl.innerHTML = "";
+    return;
+  }
+
+  let html = text.replace(/\n/g, "<br>");
+
+  if (keys.length) {
+    keys.sort((a, b) => b.length - a.length);
+    const re = new RegExp("(" + keys.map(k => k.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).join("|") + ")", "gi");
+    html = html.replace(re, x => `<span class="highlight">${x}</span>`);
+  }
+
+  descEl.innerHTML = html;
+  applyFont();
+  applyTextStyles();
+}
+
+
+/* ============================================================
+   TEXT STYLES (SIZE, STROKE, SHADOW)
+   ============================================================ */
+
+function hexToRgb(hex) {
+  let h = hex.replace("#", "");
+  if (h.length === 3) {
+    h = h.split("").map(c => c + c).join("");
+  }
+  const num = parseInt(h, 16);
+  return { r: (num >> 16) & 255, g: (num >> 8) & 255, b: num & 255 };
+}
+
+function applyTextStyles() {
+  // Sizes
+  const tSize = Number(titleSizeInput.value);
+  const dSize = Number(descSizeInput.value);
+  titleEl.style.fontSize = tSize + "px";
+  descEl.style.fontSize  = dSize + "px";
+
+  // Line heights
+  const tLH = parseFloat(titleLineHeightInput.value);
+  const dLH = parseFloat(descLineHeightInput.value);
+  titleEl.style.lineHeight = tLH;
+  descEl.style.lineHeight  = dLH;
+
+  // Letter spacing
+  const letter = parseFloat(titleLetterSpacingInput.value);
+  titleEl.style.letterSpacing = letter + "px";
+
+  // Stroke
+  const strokeWidth = parseFloat(strokeWidthInput.value);
+  const strokeColor = strokeColorInput.value;
+  const strokeVal   = strokeWidth > 0 ? `${strokeWidth}px ${strokeColor}` : "0 transparent";
+
+  const strokeTargets = [titleEl, descEl, ...document.querySelectorAll(".highlight")];
+  strokeTargets.forEach(el => {
+    el.style.webkitTextStroke = strokeVal;
+    el.style.textStroke       = strokeVal;
+  });
+
+  // Shadow
+  if (shadowToggle.checked) {
+    const sx    = Number(shadowXInput.value);
+    const sy    = Number(shadowYInput.value);
+    const blur  = Number(shadowBlurInput.value);
+    const alpha = Number(shadowAlphaInput.value);
+    const { r, g, b } = hexToRgb(shadowColorInput.value);
+    const shadowStr = `${sx}px ${sy}px ${blur}px rgba(${r}, ${g}, ${b}, ${alpha})`;
+    titleEl.style.textShadow = shadowStr;
+    descEl.style.textShadow  = shadowStr;
+  } else {
+    titleEl.style.textShadow = "none";
+    descEl.style.textShadow  = "none";
+  }
+
+  // Labels
+  titleSizeVal.textContent   = tSize + "px";
+  descSizeVal.textContent    = dSize + "px";
+  titleLHVal.textContent     = tLH.toFixed(2);
+  descLHVal.textContent      = dLH.toFixed(2);
+  letterSpaceVal.textContent = letter.toFixed(1) + "px";
+  strokeWidthVal.textContent = strokeWidth.toFixed(1) + "px";
+  shadowXVal.textContent     = shadowXInput.value + "px";
+  shadowYVal.textContent     = shadowYInput.value + "px";
+  shadowBlurVal.textContent  = shadowBlurInput.value + "px";
+  shadowAlphaVal.textContent = shadowAlphaInput.value;
+}
+
+
+/* ============================================================
+   CANVAS RATIO
+   ============================================================ */
+
+function applyRatio() {
+  const val = ratioSelect.value; // "1:1" etc
+  postEl.style.aspectRatio = val.replace(":", " / ");
+}
+
+
+/* ============================================================
+   EVENT LISTENERS
+   ============================================================ */
+
+// Text
+titleIn.addEventListener("input", () => {
+  titleEl.textContent = titleIn.value;
+  applyFont();
+  applyTextStyles();
+});
+
+descIn.addEventListener("input", updateDesc);
+keysIn.addEventListener("input", updateDesc);
+
+// Font
+fontSelect.addEventListener("change", () => {
+  applyFont();
+  applyTextStyles();
+});
+
+// Ratio
+ratioSelect.addEventListener("change", applyRatio);
+
+// Style controls
+[
+  titleSizeInput,
+  descSizeInput,
+  titleLineHeightInput,
+  descLineHeightInput,
+  titleLetterSpacingInput,
+  strokeWidthInput,
+  strokeColorInput,
+  shadowToggle,
+  shadowXInput,
+  shadowYInput,
+  shadowBlurInput,
+  shadowAlphaInput,
+  shadowColorInput
+].forEach(el => el.addEventListener("input", applyTextStyles));
+
+
+/* ============================================================
+   DOWNLOAD + RESET
+   ============================================================ */
+
+downloadBtn.addEventListener("click", async () => {
+  const canvas = await html2canvas(postEl, { scale: 1.8 });
+  const a = document.createElement("a");
+  a.href = canvas.toDataURL("image/jpeg", 0.95);
+  a.download = "tamilzone_post.jpg";
+  a.click();
+});
+
+resetBtn.addEventListener("click", () => {
+  // inputs
+  titleIn.value  = "";
+  descIn.value   = "";
+  keysIn.value   = "";
+  mainImgFile.value   = "";
+  secondImgFile.value = "";
+
+  // images
+  mainImgSingle.src = "";
+  mainImgLeft.src   = "";
+  mainImgRight.src  = "";
+
+  // text
+  titleEl.textContent = "";
+  descEl.innerHTML    = "";
+
+  // layout
+  layoutSelect.value = "single";
+  imageLayout.classList.remove("double");
+  imageLayout.classList.add("single");
+
+  // ratio
+  ratioSelect.value = "1:1";
+  applyRatio();
+
+  // reset style controls
+  titleSizeInput.value          = 72;
+  descSizeInput.value           = 28;
+  titleLineHeightInput.value    = 1.05;
+  descLineHeightInput.value     = 1.35;
+  titleLetterSpacingInput.value = -1;
+  strokeWidthInput.value        = 3.5;
+  strokeColorInput.value        = "#000000";
+  shadowToggle.checked          = true;
+  shadowXInput.value            = 0;
+  shadowYInput.value            = 0;
+  shadowBlurInput.value         = 10;
+  shadowAlphaInput.value        = 0.9;
+  shadowColorInput.value        = "#000000";
+
+  applyFont();
+  applyTextStyles();
+});
+
+
+/* ============================================================
+   INIT
+   ============================================================ */
+
+applyFont();
+applyRatio();
+applyTextStyles();
+
+</script>
 </body>
 </html>

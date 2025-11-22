@@ -101,6 +101,12 @@
   --canvas: 1080px;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   background: #111;
   margin: 0;
@@ -134,15 +140,19 @@ body {
   color: #fff;
 }
 
+.btn.full-width {
+  width: 100%;
+}
+
 
 
 /* ============================================================
-   PART 3 — CONTROLS PANEL STYLING
+   PART 3 — CONTROLS PANEL + TABS
    ============================================================ */
 
 .controls {
   width: 100%;
-  max-width: 420px;
+  max-width: 520px;
   background: rgba(255,255,255,0.07);
   padding: 16px;
   border-radius: 10px;
@@ -150,7 +160,7 @@ body {
 }
 
 .controls h3 {
-  margin: 0 0 6px 0;
+  margin: 0 0 10px 0;
   font-size: 16px;
   font-weight: 900;
 }
@@ -180,6 +190,69 @@ body {
   resize: vertical;
 }
 
+.controls input[type="range"] {
+  padding: 0;
+}
+
+.controls input[type="color"] {
+  padding: 0;
+  height: 32px;
+}
+
+/* Tabs */
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 8px 6px;
+  font-size: 12px;
+  border-radius: 999px;
+  border: 1px solid #555;
+  background: #222;
+  color: #eee;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: #ff8b00;
+  color: #000;
+  border-color: #ff8b00;
+  font-weight: 800;
+}
+
+.tab-panel {
+  display: none;
+  margin-top: 6px;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+/* Small helper layout for sliders */
+
+.slider-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.slider-row span {
+  font-size: 11px;
+  opacity: 0.8;
+  min-width: 52px;
+}
+
+.slider-row input[type="number"] {
+  width: 58px;
+}
+
 
 
 /* ============================================================
@@ -189,7 +262,7 @@ body {
 #post {
   width: 100%;
   max-width: var(--canvas);
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1; /* default, JS changes this for 4:5, 9:16 */
   margin: 0 auto;
   position: relative;
   background: var(--inner-purple);
@@ -197,21 +270,62 @@ body {
   overflow: hidden;
 }
 
-.single-image {
+/* Image layout wrapper */
+
+.image-layout {
   position: absolute;
   top: 3%;
   left: 3%;
   right: 3%;
   height: 50%;
+}
+
+/* Single image mode */
+
+.single-image,
+.double-image {
+  width: 100%;
+  height: 100%;
+}
+
+.image-layout.single .single-image {
+  display: block;
+}
+
+.image-layout.single .double-image {
+  display: none;
+}
+
+/* Double image (side-by-side) */
+
+.image-layout.double .single-image {
+  display: none;
+}
+
+.image-layout.double .double-image {
+  display: flex;
+  gap: 2%;
+}
+
+.double-col {
+  flex: 1;
   border-radius: 12px;
   overflow: hidden;
 }
 
-.single-image img {
+.single-image {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.single-image img,
+.double-col img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
+/* Text area */
 
 .text-area {
   position: absolute;
